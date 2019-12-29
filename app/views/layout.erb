@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chore Control</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1>Chore Control! Where you control your chores.</h1>
+    <% if logged_in? %>
+        <p><a href="/home">Home</a> <a href="/posts">Posts</a>
+        <form action="/logout" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="submit" value="Logout">
+        </form>
+        </p>
+    <% end %>
+    <%= yield %> 
+</body>
+</html>

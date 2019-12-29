@@ -1,0 +1,5 @@
+<a href="/posts/new">New Post</a>
+
+<% @posts.each do |post| %>
+    <%= erb :'posts/_post', locals: {user: post.user, post: post} %>
+<% end %>

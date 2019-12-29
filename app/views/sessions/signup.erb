@@ -1,0 +1,15 @@
+<form action="/users" method="post">
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username"><br>
+    <label for="email_address">Email</label>
+    <input id="email_address" type="text" name="email_address"><br>
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password"><br>
+    <input type="submit" value="Sign Up">
+</form>
+
+<% if @user && @user.errors.any? %>
+    <% @user.errors.full_messages.each do |e| %>
+        <p class="danger"><%= e %></p>
+    <% end %>
+<% end %>

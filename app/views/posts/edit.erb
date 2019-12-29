@@ -1,0 +1,12 @@
+<% if !!@message %>
+    <p class="danger"><%= @message %></p>
+<% end %>
+
+<%# the action posts and method post are not the same %>
+<%# it could be action dogs and the method would be post %>
+<form action="/posts/<%= @post.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <label for="content">Chore to be added:</label><br>
+    <textarea name="content" id="content" cols="30" rows="10"></textarea><br>
+    <input type="submit" value="Add Chore">
+</form>
