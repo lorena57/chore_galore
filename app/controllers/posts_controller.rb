@@ -8,10 +8,12 @@ class PostsController < ApplicationController
 
     #Create a post
 
-    get '/posts/new' do
+   get '/posts/new' do
         authenticate
+        @post = current_user.posts.new
         erb :'posts/new'
     end
+
 
     post '/posts' do
         authenticate
