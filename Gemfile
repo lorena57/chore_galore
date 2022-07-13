@@ -4,7 +4,7 @@ gem "sinatra", "~> 2.0"
 
 gem "pry", "~> 0.12.2"
 
-gem "activerecord", "~> 5.2", '>= 5.2', :require => 'active_record'
+gem "activerecord", "~> 5.2", :require => 'active_record'
 
 gem "sinatra-activerecord", "~> 2.0", :require => 'sinatra/activerecord'
 
