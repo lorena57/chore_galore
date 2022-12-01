@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem "sinatra", "~> 2.0"
+gem "sinatra", "~> 2.2"
 
 gem "pry", "~> 0.12.2"
 
